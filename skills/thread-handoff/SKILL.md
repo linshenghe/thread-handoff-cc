@@ -1,6 +1,6 @@
 ---
 name: thread-handoff
-description: Record what Claude Code just did to mastercontrol.md so Codex knows the latest state. Use when the user says "record this", "handoff", "log to mastercontrol", or after completing a task that Codex will continue.
+description: Record what Claude Code just did to MASTER_CONTROL.md so Codex knows the latest state. Use when the user says "record this", "handoff", "log to master control", or after completing a task that Codex will continue.
 argument-hint: "<what was done>"
 disable-model-invocation: true
 allowed-tools: Bash(git *) Bash(ls *) Read
@@ -14,7 +14,7 @@ allowed-tools: Bash(git *) Bash(ls *) Read
 
 ## Instructions
 
-Append a handoff entry to `mastercontrol.md` in the project root. If the file does not exist, create it.
+Append a handoff entry to `MASTER_CONTROL.md` in the project root. If the file does not exist, create it.
 
 Use this exact format:
 
@@ -37,7 +37,7 @@ Use this exact format:
 
 Rules:
 - The `[CC]` prefix in the heading marks this as a Claude Code entry, distinct from Codex entries.
-- Always prepend new entries at the TOP of `mastercontrol.md` (newest first), after any existing frontmatter or title line.
-- If `mastercontrol.md` already has a `# Master Control` title or similar, keep it at the top and insert the new entry right after it.
+- Always prepend new entries at the TOP of `MASTER_CONTROL.md` (newest first), after any existing frontmatter or title line.
+- If `MASTER_CONTROL.md` already has a `# Master Control` title or similar, keep it at the top and insert the new entry right after it.
 - Keep the summary concise — Codex will scan this, not read a novel.
 - If `$ARGUMENTS` is empty, ask the user what was done before writing.

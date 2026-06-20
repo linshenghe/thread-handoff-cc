@@ -1,6 +1,6 @@
 # thread-handoff-cc
 
-Claude Code plugin — records CC session results to `mastercontrol.md` for seamless handoff to Codex.
+Claude Code plugin — records CC session results to `MASTER_CONTROL.md` for seamless handoff to Codex.
 
 ## What it does
 
@@ -10,7 +10,7 @@ When you finish a task in Claude Code, run:
 /thread-handoff Fixed the data loading bug in analysis.R
 ```
 
-This appends a structured entry to `mastercontrol.md` in your project root:
+This appends a structured entry to `MASTER_CONTROL.md` in your project root:
 
 ```markdown
 ## [CC] Fixed the data loading bug in analysis.R
@@ -31,7 +31,7 @@ This appends a structured entry to `mastercontrol.md` in your project root:
 The encoding parameter is now explicit in config.R — check that before changing anything.
 ```
 
-Codex opens the project, reads `mastercontrol.md`, and knows exactly what CC did.
+Codex opens the project, reads `MASTER_CONTROL.md`, and knows exactly what CC did.
 
 ## Install
 

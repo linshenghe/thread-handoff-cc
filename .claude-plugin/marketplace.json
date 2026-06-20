@@ -9,7 +9,7 @@
     {
       "name": "thread-handoff",
       "source": "./",
-      "description": "Record Claude Code session results to mastercontrol.md for seamless handoff to Codex.",
+      "description": "Record Claude Code session results to MASTER_CONTROL.md for seamless handoff to Codex.",
       "version": "1.0.0",
       "license": "MIT"
     }

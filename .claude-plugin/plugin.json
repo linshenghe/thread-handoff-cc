@@ -1,7 +1,7 @@
 {
   "name": "thread-handoff",
   "version": "1.0.0",
-  "description": "Record Claude Code session results to mastercontrol.md for seamless handoff to Codex.",
+  "description": "Record Claude Code session results to MASTER_CONTROL.md for seamless handoff to Codex.",
   "author": {
     "name": "linshenghe",
     "url": "https://github.com/linshenghe"
