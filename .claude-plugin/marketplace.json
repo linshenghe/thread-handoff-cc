@@ -1,0 +1,17 @@
+{
+  "name": "linshenghe-tools",
+  "owner": {
+    "name": "linshenghe",
+    "url": "https://github.com/linshenghe"
+  },
+  "description": "Personal toolkit plugins for Claude Code — thread handoff, project utilities, and more.",
+  "plugins": [
+    {
+      "name": "thread-handoff",
+      "source": "./",
+      "description": "Record Claude Code session results to mastercontrol.md for seamless handoff to Codex.",
+      "version": "1.0.0",
+      "license": "MIT"
+    }
+  ]
+}

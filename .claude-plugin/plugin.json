@@ -1,0 +1,13 @@
+{
+  "name": "thread-handoff",
+  "version": "1.0.0",
+  "description": "Record Claude Code session results to mastercontrol.md for seamless handoff to Codex.",
+  "author": {
+    "name": "linshenghe",
+    "url": "https://github.com/linshenghe"
+  },
+  "homepage": "https://github.com/linshenghe/thread-handoff-cc",
+  "repository": "https://github.com/linshenghe/thread-handoff-cc",
+  "license": "MIT",
+  "keywords": ["handoff", "codex", "thread", "mastercontrol", "session-log"]
+}
