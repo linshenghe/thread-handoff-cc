@@ -12,6 +12,13 @@
       "description": "Record Claude Code session results to MASTER_CONTROL.md for seamless handoff to Codex.",
       "version": "1.0.0",
       "license": "MIT"
+    },
+    {
+      "name": "weixin-fetch",
+      "source": "./",
+      "description": "抓取微信公众号文章并转为 Markdown。使用 Playwright 浏览器自动化绕过反爬。",
+      "version": "1.0.0",
+      "license": "MIT"
     }
   ]
 }
