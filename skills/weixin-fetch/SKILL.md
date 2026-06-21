@@ -9,8 +9,12 @@ Fetch WeChat (微信公众号) articles and convert to clean Markdown using Play
 
 ## Features
 
+- **Headless-first** with automatic fallback to headed mode on failure
+- **Auto retry** up to 3 times on failure
+- **Anti-detection**: hides `navigator.webdriver`, fakes Chrome plugins and permissions
 - Real Chromium browser to bypass WeChat anti-bot protections
 - Automatic lazy-loaded image handling (data-src → src)
+- **Image download** to local `_assets/` folder with smart filtering (skips < 15KB decorative images)
 - Auto-generated filename from publish date + title (YYYYMMDD format)
 - Metadata extraction (author, publish time)
 - Clean Markdown output with preserved images
@@ -30,6 +34,9 @@ python scripts/fetch_weixin.py "https://mp.weixin.qq.com/s/xxxxx"
 
 # Custom filename
 python scripts/fetch_weixin.py "https://mp.weixin.qq.com/s/xxxxx" article.md
+
+# Output to directory (auto-names inside)
+python scripts/fetch_weixin.py "https://mp.weixin.qq.com/s/xxxxx" ./articles/
 ```
 
 ## Response Pattern
@@ -47,6 +54,7 @@ When user requests WeChat article fetching:
 3. **Report results:**
    - Confirm file saved with statistics (characters, words, images)
    - Show the auto-generated filename
+   - Note images downloaded locally (if any)
 
 ## Example Workflows
 
@@ -59,6 +67,7 @@ python scripts/fetch_weixin.py "https://mp.weixin.qq.com/s/xxxxx"
 # Result:
 # ✓ Saved: 20251214关于财政政策和货币政策的关系.md
 # ✓ Statistics: 12,345 characters, 8,234 words, 5 images
+# ✓ 3/5 images downloaded locally
 ```
 
 ### Custom filename
@@ -75,8 +84,9 @@ python scripts/fetch_weixin.py "https://mp.weixin.qq.com/s/xxxxx" economy.md
 
 | Issue | Solution |
 |-------|----------|
-| WeChat blocked | Script uses real browser to bypass anti-bot |
-| Timeout | Script has 60s timeout with retry - usually succeeds on second attempt |
+| WeChat blocked | Script uses real browser + anti-detection to bypass |
+| Timeout | Auto retries 3 times, last attempt uses headed mode |
 | Playwright not installed | Run: `pip install playwright && playwright install chromium` |
 | Empty content | Wait for page to fully load; check if article is still accessible |
 | Missing images | Script auto-converts lazy-loaded images; check network connectivity |
+| Browser crash | Last retry switches to headed mode for debugging |
