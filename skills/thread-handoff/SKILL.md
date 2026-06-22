@@ -49,7 +49,7 @@ Template rules:
 
 ### Step 2: Write the handoff entry
 
-Append a handoff entry to the `## 活动日志` section of `MASTER_CONTROL.md`. Insert new entries at the TOP of the section (newest first).
+Insert the new entry into the `## 活动日志` section. **The entry goes AFTER `## 项目信息` and at the TOP of `## 活动日志`** (newest first). Do NOT insert the entry before `项目信息` — the `[CC]` entry is a log item, not file header.
 
 Use this exact format for the entry:
 
