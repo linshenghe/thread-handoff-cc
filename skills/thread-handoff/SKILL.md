@@ -57,7 +57,7 @@ Use this exact format for the entry:
 ## [CC] $ARGUMENTS
 
 - **Time**: <current timestamp in YYYY-MM-DD HH:MM format>
-- **Session ID**: <session id>
+- **Session ID**: <the value from `$CLAUDE_CODE_SESSION_ID` shown in Current state above — do NOT write the placeholder>
 - **Branch**: <branch name>
 - **Commit**: <last commit hash or "(none)">
 - **Files touched**: <comma-separated list, or "(none)">
