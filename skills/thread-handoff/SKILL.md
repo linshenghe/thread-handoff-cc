@@ -8,6 +8,7 @@ allowed-tools: Bash(git *) Bash(ls *) Read
 
 ## Current state
 
+- Session ID: !`echo $CLAUDE_CODE_SESSION_ID`
 - Branch: !`git branch --show-current 2>/dev/null || echo "(not a git repo)"`
 - Last commit: !`git log -1 --oneline 2>/dev/null || echo "(none)"`
 - Changed files: !`git diff --name-only 2>/dev/null || echo "(none)"`
@@ -22,6 +23,7 @@ Use this exact format:
 ## [CC] $ARGUMENTS
 
 - **Time**: <current timestamp in YYYY-MM-DD HH:MM format>
+- **Session ID**: <session id>
 - **Branch**: <branch name>
 - **Commit**: <last commit hash or "(none)">
 - **Files touched**: <comma-separated list, or "(none)">
